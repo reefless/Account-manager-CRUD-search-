@@ -96,8 +96,8 @@
                         </v-layout>
                         <v-layout row>
                             <v-flex xs12>
-                                <router-link to="/">
-                                    <v-btn color="blue darken-3" class="white--text" @click="addToAPI"><v-icon left>save</v-icon>Save</v-btn>
+                                <v-btn color="blue darken-3" class="white--text" @click="addToAPI"><v-icon left>save</v-icon>Save</v-btn>
+                                <router-link to="/index">
                                     <v-btn color="red darken-3" class="white--text" ><v-icon left>close</v-icon>Close</v-btn>
                                 </router-link>
                             </v-flex>
@@ -131,7 +131,8 @@ import Vue from 'vue'
             Vue.$http.post('http://localhost:3000/users', this.User)
             .then((response) => {
                 console.log(response)
-                alert('Added' + this.User.id + '!')
+                // alert('Added' + this.User.id + '!')
+                this.$router.push('/index')
             })
             .catch((error) => {
                 console.log(error)

@@ -10,13 +10,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
-      component: index
+      name: 'login',
+      component: login
     },
     {
-        path: '/login',
-        name: 'login',
-        component: login
+        path: '/index',
+        name: 'index',
+        component: index
     },
     {
         path: '/add',
@@ -24,7 +24,7 @@ export default new Router({
         component: add
     },
     {
-      path: '/edit/:id',
+      path: '/edit/:Eid',
       name: 'edit',
       component: edit,
       props: true,

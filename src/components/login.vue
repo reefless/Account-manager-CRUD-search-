@@ -64,7 +64,7 @@ import Vue from 'vue'
             .then((response)=>{
                 // alert(response.data[0].username)
                 if(this.formData.username == response.data[0].username && this.formData.password == response.data[0].password)
-                    this.$router.push('/')
+                    this.$router.push('/index')
                 else{
                     alert("Wrong username or Password")
                     this.formData.username = ''

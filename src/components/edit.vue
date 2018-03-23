@@ -96,8 +96,8 @@
                         </v-layout>
                         <v-layout row>
                             <v-flex xs12>
-                                <v-btn color="blue darken-3" class="white--text" type="submit" @click="updateInfo" href="/"><v-icon left>save</v-icon>Save</v-btn>
-                                <v-btn color="red darken-3" class="white--text" href="/"><v-icon left>close</v-icon>Close</v-btn>
+                                <v-btn color="blue darken-3" class="white--text" type="submit" @click="updateInfo"><v-icon left>save</v-icon>Save</v-btn>
+                                <v-btn color="red darken-3" class="white--text" href="/#/index"><v-icon left>close</v-icon>Close</v-btn>
                             </v-flex>
                         </v-layout>
                     </v-card>
@@ -140,6 +140,7 @@ import Vue from 'vue'
                 Vue.$http.post('http://localhost:3000/users/' + this.Eid, this.User)
                 .then((response) => {
                     console.log(response.data)
+                    this.$router.push('/index')
                 })
                 .catch((error) =>{
                     console.log(error)
